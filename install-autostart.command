@@ -17,4 +17,4 @@ launchctl kickstart -k "gui/$UID_VALUE/$LABEL"
 
 echo "Installed and started: $LABEL"
 echo "Web UI: http://127.0.0.1:1984"
-echo "RTSP:   rtsp://127.0.0.1:8554/c700_remote_sim"
+"$BASE_DIR/switch-mode.command" status

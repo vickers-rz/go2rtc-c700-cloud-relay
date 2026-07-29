@@ -8,4 +8,6 @@ log:
   level: debug
 
 streams:
+  c700: xiaomi://USER_ID:REGION@203.0.113.1?did=DEVICE_DID&model=DEVICE_MODEL
+  c700_lan: xiaomi://USER_ID:REGION@CAMERA_LAN_IP?did=DEVICE_DID&model=DEVICE_MODEL
   c700_remote_sim: xiaomi://USER_ID:PASS_TOKEN@203.0.113.1?did=DEVICE_DID&model=DEVICE_MODEL

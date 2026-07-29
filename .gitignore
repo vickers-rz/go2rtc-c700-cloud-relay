@@ -1,6 +1,8 @@
 config/go2rtc.yaml
+config/active-mode
 logs/
 recordings/
 *.pid
 .DS_Store
 bin/go2rtc.before-*
+tmp/
