@@ -3,3 +3,4 @@ logs/
 recordings/
 *.pid
 .DS_Store
+bin/go2rtc.before-*
