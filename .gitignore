@@ -1,0 +1,5 @@
+config/go2rtc.yaml
+logs/
+recordings/
+*.pid
+.DS_Store

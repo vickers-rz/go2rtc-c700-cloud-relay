@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.vickers.go2rtc-c700</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/Users/vickers/Documents/go2rtc-c700-cloud-relay/bin/go2rtc</string>
+    <string>-config</string>
+    <string>/Users/vickers/Documents/go2rtc-c700-cloud-relay/config/go2rtc.yaml</string>
+  </array>
+
+  <key>RunAtLoad</key>
+  <true/>
+
+  <key>KeepAlive</key>
+  <true/>
+
+  <key>WorkingDirectory</key>
+  <string>/Users/vickers/Documents/go2rtc-c700-cloud-relay</string>
+
+  <key>StandardOutPath</key>
+  <string>/Users/vickers/Documents/go2rtc-c700-cloud-relay/logs/go2rtc.launchd.log</string>
+
+  <key>StandardErrorPath</key>
+  <string>/Users/vickers/Documents/go2rtc-c700-cloud-relay/logs/go2rtc.launchd.err.log</string>
+</dict>
+</plist>
