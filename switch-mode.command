@@ -36,6 +36,7 @@ if [[ "$mode" == "status" ]]; then
     echo "Current mode: unknown"
   fi
   echo "Stable RTSP: rtsp://127.0.0.1:8554/c700"
+  echo "Synology RTSP: rtsp://127.0.0.1:8554/c700_synology?video=h265&audio=aac"
   echo "Cloud RTSP:  rtsp://127.0.0.1:8554/c700_remote_sim"
   echo "LAN RTSP:    rtsp://127.0.0.1:8554/c700_lan"
   exit 0
@@ -114,4 +115,5 @@ fi
 
 echo "C700 mode set to: $(cat "$MODE_FILE")"
 echo "Stable RTSP: rtsp://127.0.0.1:8554/c700"
+echo "Synology RTSP: rtsp://127.0.0.1:8554/c700_synology?video=h265&audio=aac"
 echo "Web preview: http://127.0.0.1:1984/stream.html?src=c700&mode=mse"

@@ -11,3 +11,6 @@ streams:
   c700: xiaomi://USER_ID:REGION@203.0.113.1?did=DEVICE_DID&model=DEVICE_MODEL
   c700_lan: xiaomi://USER_ID:REGION@CAMERA_LAN_IP?did=DEVICE_DID&model=DEVICE_MODEL
   c700_remote_sim: xiaomi://USER_ID:PASS_TOKEN@203.0.113.1?did=DEVICE_DID&model=DEVICE_MODEL&relay=cloud
+  c700_synology:
+    - rtsp://127.0.0.1:8554/c700?video=h265
+    - ffmpeg:rtsp://127.0.0.1:8554/c700?audio=opus#audio=aac#timeout=30
