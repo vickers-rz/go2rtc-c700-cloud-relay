@@ -211,12 +211,9 @@ func getMissURL(url *url.URL) (string, error) {
 		query.Set("uid", v.Vendor.Params.UID)
 	}
 
-	// cs2 cloud-relay mode: cameras of the MJA1-secure-element generation
-	// (e.g. xiaomi.camera.c302n) cannot be reached on the LAN port — they
-	// only stream via the Mi-Cloud relay. Pass the p2p_id through and
-	// redirect the host to the relay; the miss client picks this up and
-	// runs the cloud handshake.
-	if v.Vendor.ID == 4 && v.Vendor.Params.UID != "" {
+	// cs2 cloud-relay mode is opt-in. Keep LAN streams direct by default even
+	// when Mi-Cloud returns a p2p_id; use relay=cloud to force the relay path.
+	if v.Vendor.ID == 4 && v.Vendor.Params.UID != "" && query.Get("relay") == "cloud" {
 		query.Set("p2p_id", v.Vendor.Params.UID)
 		log.Debug().Msgf("xiaomi: cs2 cloud-relay mode, redirecting to %s", cs2CloudRelayHost)
 		url.Host = cs2CloudRelayHost

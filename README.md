@@ -61,3 +61,25 @@ Double-click `stop-go2rtc.command`, or run:
 - `config/go2rtc.example.yaml` is a redacted template.
 - `bin/go2rtc` is a patched build based on AlexxIT/go2rtc PR #2264 with additional relay fallback addresses observed from the C700.
 - `patches/` keeps the two changed source files for traceability.
+
+## C700 History Research
+
+The `tools/xiaomi-history/` prototype provides the command surface and capture
+workflow for reverse engineering Mi Home's SD-card history timeline and
+one-minute download feature.
+
+Start with:
+
+```sh
+cd tools/xiaomi-history
+python3 -m venv .venv
+. .venv/bin/activate
+python -m pip install -e '.[dev]'
+cd ../..
+xiaomi-history cameras
+xiaomi-history capture-session --label mac-ios
+```
+
+The real `list` and `download` commands are intentionally guarded until the
+private history protocol is mapped from captures. See
+`docs/xiaomi-history-research.md` for the required evidence.
