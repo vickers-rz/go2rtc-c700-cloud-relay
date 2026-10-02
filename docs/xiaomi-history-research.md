@@ -10,17 +10,11 @@ The local go2rtc build already proves these pieces work against the C700:
 - CS2 cloud relay handshake and fallback relay hosts.
 - Real-time media session setup for go2rtc RTSP/WebRTC output.
 
-## Missing Protocol Pieces
+## Current Status: Timeline Mapped, Playback/Download Separate
 
-The SD-card history feature still needs these fields mapped from Mi Home:
+The SD timeline has since been mapped and tested on the physical C700: CS2 channel 1 carries RDT; command 6 returns segment metadata and command 11 enriches event types. See [the SD indexer](../tools/c700-sd-indexer/README.md) and [the current architecture](architecture.md). The static/plugin findings below are research evidence, not a claim that every playback/download path is implemented.
 
-- Timeline/list request endpoint or P2P command.
-- Date/time format and timezone handling.
-- Response structure for available one-minute segments.
-- Playback/download command ID and parameters.
-- Media payload framing, encryption, and end-of-file marker.
-- Whether the App downloads an existing file, remuxes a playback stream, or saves
-  locally from a history playback session.
+Remaining playback/download work includes validating command parameters, media payload framing, encryption, end-of-file markers, and whether the App downloads a file or remuxes a playback stream. Timeline indexing must be accepted independently from video extraction.
 
 ## Evidence Needed Before Implementing Download
 
