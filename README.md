@@ -2,7 +2,7 @@
 
 **HomeMind 的摄像头与视频证据子项目**：基于 go2rtc 接入小米 C700，提供 LAN / 云中继模式、RTSP/WebRTC 输出、SD 时间线索引与受保护的录像保留。
 
-[HomeMind 子项目入口](https://github.com/vickers-rz/HomeMind/tree/main/subprojects/c700-video) · [架构与边界](docs/architecture.md) · [技术说明](docs/interview.md)
+[HomeMind 子项目入口](https://github.com/vickers-rz/HomeMind/tree/main/subprojects/c700-video) · [架构与边界](docs/architecture.md) · [技术说明](docs/technical-guide.md)
 
 HomeMind 仓库直接收录本子项目概览；这里独立维护实现源码和运行文档。本仓库公开维护。当前功能和历史实机记录已核对，线上服务未在本次文档整理中重新验收。
 
@@ -51,7 +51,7 @@ HomeMind 仓库直接收录本子项目概览；这里独立维护实现源码�
 ## 文档与源码导航
 
 - [架构、时间语义与执行护栏](docs/architecture.md)
-- [技术说明与演示](docs/interview.md)
+- [技术说明与演示](docs/technical-guide.md)
 - [Mac 启停与排障](docs/mac.md)
 - [N100 服务管理](docs/n100.md)
 - [SD 时间线协议、SQLite 与构建](tools/c700-sd-indexer/README.md)
